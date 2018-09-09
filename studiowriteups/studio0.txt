@@ -4,48 +4,76 @@ Students in your studio group:
 
     Name        WUSTLKey (e.g. "jbuhler")
 	
-1.
-2.
+1.Bozhao Li 	bozhaoli
+2.Yujia Wang    yujia.w
 3.
-4.
+4.  
 5.
 6.
 
 Below each question, type in your short, to-the-point answers.
 
 Question PS1: 
+1.Similar straight lines and curves 2. Running quadratic needs more time than linear 3. Because quadratic.java contains 2 loops, which need more time to run.
 
 Question PS2:
-	
+Because if there is only one loop, the computer only needs to calculate n times and it can calculate it really fast. If there are 2 loops, the computer needs to calculate n^2 times, which need more time and plotted value on X-axis can be bigger.
+
 Question PS3: 
-	
+If ticker.tick() is in the inner loop, the plot will be a curve, and the value will be greater. If ticker.tick() is in the outer loop, the plot will be a straight line. So it 
+affects both shape if the curve and plotted value.
+
 Question PS4: 
-		
+The value of ticks = 3n^2 + 3n +1 and the shape is a quadratic function
+
 Question PS5: 
-	
+Deleting each ticks in inner loop will decrease the value by n^2
+
 Question A1:
-	
+1.Both plots look like horizontal, but tick more straight. each iteration cost same ticks and similar time.
+2.Each spot represent the tick and time of one operation
+3.It doesn't matter. No matter what n is, adding two numbers takes the same time.
+
 Question A2:
-	
+1.If the length of the data is bigger, it will take more time to allocate it.
+2.No, the line of code takes more time when this.n becomes bigger.
+
 Question A3:
-	
+No,  ticks represents the operation of loop, but the time represents the time of allocation. They are different
+
 Question A4:
+1.Yes 2.If ticker.tick(n), ticks represent the operation of allocation, thus the time and the ticks are more similar. Allocate space for data by number of bits.
 
 Question A5:
+1.The team writes down decimal number.
+2.Decimal:int(lg(x))+1 
+tally marks:[x/5] 
+3.x>5
 
 Question A6:
+1.2^n < X < 2^(n+1) , n is the number of marks. 2, ratio =n/ (int(lg(x))+1)
 
 Question A7:
-	
+Choosing decimal is more efficient, because we can use few marks to represent large number.
+
 Question C1:
+1. It is a linear equation line   2. y= ax+b best fits the growth rate of this curve.
 
 Question C2:
+Discontinuities mean when the length of the array is not enough, computer will double the length of the array, which will increase ticks dramatically.
 
 Question C3:
-	
+Ensure X will be located close to 2^n, but not larger than 2^n. Doubling will be a good choice.
+No,because we don't know the time cost.
+
 Question D1:
-	
+T(n) = n*(n+1)/2 ,yes
+
 Question D2:
+T(2^k)=2^k-1
+
+
 
 	
 	
+
