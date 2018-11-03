@@ -1,6 +1,7 @@
 package hash;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 //
 // STRINGTABLE.JAVA
@@ -27,8 +28,13 @@ public class StringTable {
     {
     	this.nBuckets = nBuckets;
     	buckets = new LinkedList[nBuckets];
-	
-    	// TODO - fill in the rest of this method to initialize your table
+    	// each node of the array is a LinkedList
+    	size = 0;
+    	
+//    	initialize each node of the array a LinkedList
+    	for (int i = 0; i < nBuckets; i++) {
+    		buckets[i] = new LinkedList<Record>();
+    	}
     }
     
     
@@ -40,10 +46,29 @@ public class StringTable {
      *         record with the same key is already present in the table.
      */
     public boolean insert(Record r) 
-    {  
-    	// TODO - implement this method
-	
-    	return false;
+    {
+    	String r_key = r.key;
+    	int index = toIndex(stringToHashCode(r_key));
+    	
+    	LinkedList<Record> indexlist = buckets[index];
+    	if (indexlist.isEmpty() == true) {
+    		indexlist.add(r);
+    		size = size + 1;
+    		return true;
+    	}
+    	else {
+    		ListIterator<Record> insert_Itr = indexlist.listIterator();
+    		while (insert_Itr.hasNext()) {
+    			Record insert_list = insert_Itr.next();
+    			if (r_key.equals(insert_list.key)) {
+    				return false;
+    			}
+    		}
+    		
+    		indexlist.addLast(r);
+    		size = size + 1;
+    		return true;
+    	}
     }
     
     
@@ -55,9 +80,23 @@ public class StringTable {
      */
     public Record find(String key) 
     {
-    	// TODO - implement this method
-	
-    	return null;
+    	int Buc_index = toIndex(stringToHashCode(key));
+    	LinkedList<Record> find_List = buckets[Buc_index];
+    	
+    	if (find_List.isEmpty() == true) {
+    		return null;
+    	}
+    	else {
+    		ListIterator<Record> find_Itr = find_List.listIterator();
+    	    while (find_Itr.hasNext()) {
+    	    	Record find_in_list = find_Itr.next();
+    	    	if (key.equals(find_in_list.key)) {
+    			return find_in_list;
+    		    }
+    	   
+    	    } 
+		    return null;
+    	}
     }
     
     
@@ -69,7 +108,25 @@ public class StringTable {
      */
     public void remove(String key) 
     {
-    	// TODO - implement this method
+    	int bucInd = toIndex(stringToHashCode(key));
+    	LinkedList<Record> rm_List = buckets[bucInd];
+    	
+    	if (rm_List.isEmpty() == false) {
+    		
+    		ListIterator<Record> rmItr =rm_List.listIterator();
+    	
+    		while (rmItr.hasNext()) {
+    			Record rm_in_list = rmItr.next();
+    			if (key.equals(rm_in_list.key)) {
+    				size = size - 1;
+    				rm_List.remove(rm_in_list);
+    				break;
+    			}
+    		}
+    	}
+//    	else {
+//    		break;
+//    	}
     }
     
 
@@ -81,16 +138,19 @@ public class StringTable {
      * stringToHashCode) to a bucket index in the hash table.
      *
      * You should use a multiplicative hashing strategy to convert
-     * hashcodes to indices.  If you want to use the fixed-point
+     * hashcodes to indices.  If you want to use the fixed-point     
      * computation with bit shifts, you may assume that nBuckets is a
      * power of 2 and compute its log at construction time.
      * Otherwise, you can use the floating-point computation.
      */
     private int toIndex(int hashcode)
     {
-    	// Fill in your own hash function here
-	
-    	return 0;
+    	double A = 0.095;
+    	double a = (hashcode*A)%1.0;
+    	
+    	int hash_index = Math.abs((int)((a*nBuckets)));
+    	
+    	return hash_index;
     }
     
     
@@ -144,3 +204,6 @@ public class StringTable {
     	return sb.toString();
     }
 }
+
+
+
