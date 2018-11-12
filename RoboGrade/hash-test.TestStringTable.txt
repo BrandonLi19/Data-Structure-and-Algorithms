@@ -1,0 +1,1016 @@
+-------------------
+CSE247 Robot tester starts testing hash on 2018-11-12 14:41:24 -0800
+
+========
+Testing in ./GradingRepos/repos/cse247-f18-students-bozhaoli: hash as of 2018-11-03 00:05
+========
+Now in: /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli
+Your branch is up to date with 'origin/master'.
+HEAD is now at 123dd52 Merge remote-tracking branch 'upstream/master'
+No local changes to save
+
+Updating 123dd52..6e8d2ed
+Fast-forward
+ RoboGrade/heaps-test.TestMinHeap.txt      |  219 ++
+ labs/avl/AVLTree.java                     |  316 ++
+ labs/avl/TreeNode.java                    |   47 +
+ labs/avl/test/FailReporter.java           |   16 +
+ labs/avl/test/TestBalancedTree.java       |  246 ++
+ labs/avl/util/TreeToStrings.java          |  163 +
+ labs/avl/validate/BSTValidationError.java |   15 +
+ labs/avl/validate/BSTValidator.java       |   97 +
+ labs/hash/Main.java                       |  143 +
+ labs/hash/Record.java                     |   23 +
+ labs/hash/SeqReader.java                  |   72 +
+ labs/hash/StringTable.java                |  209 ++
+ labs/hash/output/case1-expected.txt       |   14 +
+ labs/hash/output/case2-expected.txt       |   48 +
+ labs/hash/output/case3-expected.txt       |   25 +
+ labs/hash/output/case4-expected.txt       |   42 +
+ labs/hash/test-cases/README.txt           |   46 +
+ labs/hash/test-cases/case1-corpus.txt     |    1 +
+ labs/hash/test-cases/case1-mask.txt       |    1 +
+ labs/hash/test-cases/case1-pattern.txt    |    1 +
+ labs/hash/test-cases/case2-corpus.txt     |   32 +
+ labs/hash/test-cases/case2-mask.txt       |   35 +
+ labs/hash/test-cases/case2-pattern.txt    |   35 +
+ labs/hash/test-cases/case3-corpus.txt     | 1818 ++++++++++
+ labs/hash/test-cases/case3-pattern.txt    | 3246 +++++++++++++++++
+ labs/hash/test-cases/case4-corpus.txt     | 2993 ++++++++++++++++
+ labs/hash/test-cases/case4-mask.txt       |  592 +++
+ labs/hash/test-cases/case4-pattern.txt    | 2986 ++++++++++++++++
+ labs/hash/test/TestStringTable.java       |  264 ++
+ lecture/hashplay/BadInt.java              |   28 +
+ lecture/hashplay/SetFun.java              |   30 +
+ lecture/listaccessing/Record.java         |   40 +
+ lecture/listaccessing/ShowEquals.java     |   20 +
+ lecture/listaccessing/UsesGet.java        |   48 +
+ lecture/listaccessing/UsesIterator.java   |   57 +
+ lecture/orderedset/OrderSet247.java       |  137 +
+ lecture/orderedset/TreeNode.java          |   21 +
+ outputs/usesiterator-ticks0.csv           |  100 +
+ outputs/usesiterator-time0.csv            |  100 +
+ studios/studio8/HashColors.java           | 5543 +++++++++++++++++++++++++++++
+ studios/studio8/HashPoints.java           |   34 +
+ studios/studio8/Point.java                |   40 +
+ studiowriteups/studio10.txt               |   54 +
+ studiowriteups/studio8.txt                |   50 +
+ studiowriteups/studio9.txt                |   60 +
+ 45 files changed, 20107 insertions(+)
+ create mode 100644 RoboGrade/heaps-test.TestMinHeap.txt
+ create mode 100644 labs/avl/AVLTree.java
+ create mode 100644 labs/avl/TreeNode.java
+ create mode 100644 labs/avl/test/FailReporter.java
+ create mode 100644 labs/avl/test/TestBalancedTree.java
+ create mode 100644 labs/avl/util/TreeToStrings.java
+ create mode 100644 labs/avl/validate/BSTValidationError.java
+ create mode 100644 labs/avl/validate/BSTValidator.java
+ create mode 100644 labs/hash/Main.java
+ create mode 100644 labs/hash/Record.java
+ create mode 100644 labs/hash/SeqReader.java
+ create mode 100644 labs/hash/StringTable.java
+ create mode 100644 labs/hash/output/case1-expected.txt
+ create mode 100644 labs/hash/output/case2-expected.txt
+ create mode 100644 labs/hash/output/case3-expected.txt
+ create mode 100644 labs/hash/output/case4-expected.txt
+ create mode 100644 labs/hash/test-cases/README.txt
+ create mode 100644 labs/hash/test-cases/case1-corpus.txt
+ create mode 100644 labs/hash/test-cases/case1-mask.txt
+ create mode 100644 labs/hash/test-cases/case1-pattern.txt
+ create mode 100644 labs/hash/test-cases/case2-corpus.txt
+ create mode 100644 labs/hash/test-cases/case2-mask.txt
+ create mode 100644 labs/hash/test-cases/case2-pattern.txt
+ create mode 100644 labs/hash/test-cases/case3-corpus.txt
+ create mode 100644 labs/hash/test-cases/case3-pattern.txt
+ create mode 100644 labs/hash/test-cases/case4-corpus.txt
+ create mode 100644 labs/hash/test-cases/case4-mask.txt
+ create mode 100644 labs/hash/test-cases/case4-pattern.txt
+ create mode 100644 labs/hash/test/TestStringTable.java
+ create mode 100644 lecture/hashplay/BadInt.java
+ create mode 100644 lecture/hashplay/SetFun.java
+ create mode 100644 lecture/listaccessing/Record.java
+ create mode 100644 lecture/listaccessing/ShowEquals.java
+ create mode 100644 lecture/listaccessing/UsesGet.java
+ create mode 100644 lecture/listaccessing/UsesIterator.java
+ create mode 100644 lecture/orderedset/OrderSet247.java
+ create mode 100644 lecture/orderedset/TreeNode.java
+ create mode 100644 outputs/usesiterator-ticks0.csv
+ create mode 100644 outputs/usesiterator-time0.csv
+ create mode 100644 studios/studio8/HashColors.java
+ create mode 100644 studios/studio8/HashPoints.java
+ create mode 100644 studios/studio8/Point.java
+ create mode 100644 studiowriteups/studio10.txt
+ create mode 100644 studiowriteups/studio8.txt
+ create mode 100644 studiowriteups/studio9.txt
+Going back in time to: 2018-11-03 00:05
+At hash af0acb30209a9d1972f0d721a08754a62c1df325
+
+Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /Users/puneetsachdeva/CSE247/cse247-f18-students key bozhaoli testfilesource test/TestStringTable package hash repo ./GradingRepos/repos/cse247-f18-students-bozhaoli
+Compiling the code
+Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
+
+compile:
+     [echo] Compiling hash/Record
+    [mkdir] Created dir: /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli/bin
+    [javac] Compiling 1 source file to /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
+
+compile:
+     [echo] Compiling hash/StringTable
+    [javac] Compiling 1 source file to /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
+
+compile:
+     [echo] Compiling hash/test/TestStringTable
+    [javac] Compiling 1 source file to /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli/bin
+    [javac] Note: /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli/labs/hash/Main.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test test.TestStringTable
+Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
+
+test:
+    [junit] java.io.FileNotFoundException: labs/hash/output/case1-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA1(TestStringTable.java:168)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] Running hash.test.TestStringTable
+    [junit] Testsuite: hash.test.TestStringTable
+    [junit] Testing DNA test case 1
+    [junit] IOException while opening labs/hash/test-cases/case1-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case1-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case1-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case1-pattern.txt (No such file or directory)
+    [junit] M = 4
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] IOException while opening labs/hash/test-cases/case1-mask.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case1-mask.txt (No such file or directory)
+    [junit] MASK: 0 bases
+    [junit] Observed output for case1 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 2
+    [junit] IOException while opening labs/hash/test-cases/case2-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case2-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case2-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case2-pattern.txt (No such file or directory)
+    [junit] M = 16
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] IOException while opening labs/hash/test-cases/case2-mask.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case2-mask.txt (No such file or directory)
+    [junit] MASK: 0 bases
+    [junit] Observed output for case2 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 3
+    [junit] IOException while opening labs/hash/test-cases/case3-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case3-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case3-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case3-pattern.txt (No such file or directory)
+    [junit] M = 18
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] Observed output for case3 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 4
+    [junit] IOException while opening labs/hash/test-cases/case4-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case4-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case4-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case4-pattern.txt (No such file or directory)
+    [junit] M = 180
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] IOException while opening labs/hash/test-cases/case4-mask.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case4-mask.txt (No such file or directory)
+    [junit] MASK: 0 bases
+    [junit] Observed output for case4 matches expected output!
+    [junit] 
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec
+    [junit] Output:
+    [junit] Testing DNA test case 1
+    [junit] IOException while opening labs/hash/test-cases/case1-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case1-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case1-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case1-pattern.txt (No such file or directory)
+    [junit] M = 4
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] IOException while opening labs/hash/test-cases/case1-mask.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case1-mask.txt (No such file or directory)
+    [junit] MASK: 0 bases
+    [junit] Observed output for case1 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 2
+    [junit] IOException while opening labs/hash/test-cases/case2-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case2-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case2-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case2-pattern.txt (No such file or directory)
+    [junit] M = 16
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] IOException while opening labs/hash/test-cases/case2-mask.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case2-mask.txt (No such file or directory)
+    [junit] MASK: 0 bases
+    [junit] Observed output for case2 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 3
+    [junit] IOException while opening labs/hash/test-cases/case3-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case3-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case3-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case3-pattern.txt (No such file or directory)
+    [junit] M = 18
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] Observed output for case3 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 4
+    [junit] IOException while opening labs/hash/test-cases/case4-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case4-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case4-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case4-pattern.txt (No such file or directory)
+    [junit] M = 180
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] IOException while opening labs/hash/test-cases/case4-mask.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case4-mask.txt (No such file or directory)
+    [junit] MASK: 0 bases
+    [junit] Observed output for case4 matches expected output!
+    [junit] 
+    [junit] 
+    [junit] Error: 
+    [junit] java.io.FileNotFoundException: labs/hash/output/case1-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA1(TestStringTable.java:168)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case1-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA1(TestStringTable.java:168)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case2-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA2(TestStringTable.java:174)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case2-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA2(TestStringTable.java:174)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case3-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA3(TestStringTable.java:180)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case3-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA3(TestStringTable.java:180)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case4-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA4(TestStringTable.java:186)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case4-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA4(TestStringTable.java:186)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] 
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing DNA test case 1
+    [junit] IOException while opening labs/hash/test-cases/case1-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case1-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case1-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case1-pattern.txt (No such file or directory)
+    [junit] M = 4
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] IOException while opening labs/hash/test-cases/case1-mask.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case1-mask.txt (No such file or directory)
+    [junit] MASK: 0 bases
+    [junit] Observed output for case1 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 2
+    [junit] IOException while opening labs/hash/test-cases/case2-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case2-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case2-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case2-pattern.txt (No such file or directory)
+    [junit] M = 16
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] IOException while opening labs/hash/test-cases/case2-mask.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case2-mask.txt (No such file or directory)
+    [junit] MASK: 0 bases
+    [junit] Observed output for case2 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 3
+    [junit] IOException while opening labs/hash/test-cases/case3-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case3-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case3-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case3-pattern.txt (No such file or directory)
+    [junit] M = 18
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] Observed output for case3 matches expected output!
+    [junit] 
+    [junit] Testing DNA test case 4
+    [junit] IOException while opening labs/hash/test-cases/case4-corpus.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case4-corpus.txt (No such file or directory)
+    [junit] IOException while opening labs/hash/test-cases/case4-pattern.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case4-pattern.txt (No such file or directory)
+    [junit] M = 180
+    [junit] CORPUS: 0 bases
+    [junit] PATTERN: 0 bases
+    [junit] IOException while opening labs/hash/test-cases/case4-mask.txt
+    [junit] java.io.FileNotFoundException: labs/hash/test-cases/case4-mask.txt (No such file or directory)
+    [junit] MASK: 0 bases
+    [junit] Observed output for case4 matches expected output!
+    [junit] 
+    [junit] ------------- ---------------- ---------------
+    [junit] ------------- Standard Error -----------------
+    [junit] java.io.FileNotFoundException: labs/hash/output/case1-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA1(TestStringTable.java:168)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case1-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA1(TestStringTable.java:168)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case2-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA2(TestStringTable.java:174)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case2-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA2(TestStringTable.java:174)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case3-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA3(TestStringTable.java:180)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case3-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA3(TestStringTable.java:180)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case4-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA4(TestStringTable.java:186)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case4-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA4(TestStringTable.java:186)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testDNA1 took 0.042 sec
+    [junit] Testcase: testDNA2 took 0.003 sec
+    [junit] Testcase: testDNA3 took 0.002 sec
+    [junit] Testcase: testDNA4 took 0.002 sec
+    [junit] Testcase: testFind took 0.009 sec
+    [junit] Testcase: testInit took 0 sec
+    [junit] Testcase: testDelete took 0.001 sec
+    [junit] Testcase: testInsert took 0.001 sec
+    [junit] java.io.FileNotFoundException: labs/hash/output/case1-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA1(TestStringTable.java:168)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case2-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA2(TestStringTable.java:174)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case2-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA2(TestStringTable.java:174)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case3-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA3(TestStringTable.java:180)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case3-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA3(TestStringTable.java:180)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case4-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileOutputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+    [junit] 	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:109)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:195)
+    [junit] 	at hash.test.TestStringTable.testDNA4(TestStringTable.java:186)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+    [junit] java.io.FileNotFoundException: labs/hash/output/case4-observed.txt (No such file or directory)
+    [junit] 	at java.base/java.io.FileInputStream.open0(Native Method)
+    [junit] 	at java.base/java.io.FileInputStream.open(FileInputStream.java:196)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:139)
+    [junit] 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:94)
+    [junit] 	at java.base/java.io.FileReader.<init>(FileReader.java:58)
+    [junit] 	at hash.test.TestStringTable.compareOutput(TestStringTable.java:226)
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:209)
+    [junit] 	at hash.test.TestStringTable.testDNA4(TestStringTable.java:186)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+    [junit] 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    [junit] 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    [junit] 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    [junit] 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    [junit] 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+    [junit] 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+    [junit] 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+    [junit] 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+    [junit] 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+    [junit] 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+    [junit] 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+    [junit] 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+    [junit] 	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:536)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1205)
+    [junit] 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1048)
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing hash on 2018-11-12 14:41:33 -0800
+-------------------
