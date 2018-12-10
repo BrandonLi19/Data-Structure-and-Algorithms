@@ -93,13 +93,34 @@ public class ShortestPaths {
     	Decreaser<VertexAndDist> startHandle = handles.get(startVertex);
     	VertexAndDist vd = startHandle.getValue();
     	startHandle.decrease(new VertexAndDist(vd.vertex, 0));
-	
+    	
     	//
     	// OK, now it's up to you!
     	// Implement the main loop of Dijkstra's shortest-path algorithm,
     	// recording the parent edges of each vertex in parentEdges.
     	// FIXME
     	//
+    	while(!pq.isEmpty()) {
+    		VertexAndDist a = pq.extractMin();
+    		Vertex v = a.vertex;
+			Iterable<Edge> end=v.edgesFrom();
+			for(Edge e: end){
+				Decreaser<VertexAndDist> d=handles.get(e.to);
+				VertexAndDist vn = d.getValue();
+				int ori_length = vn.distance;
+				int new_length = weights.get(e)+a.distance;
+				if(ori_length>new_length) {
+					d.decrease(new VertexAndDist(vn.vertex,new_length));
+					parentEdges.put(e.to, e);
+
+				}
+				
+			}
+
+    		
+    	}
+    	
+    	
     }
     
     
@@ -116,7 +137,10 @@ public class ShortestPaths {
     	//
     	// FIXME: implement this using the parent edges computed in run()
     	//
-	
+		for(Vertex to=endVertex; to!=startVertex; to=parentEdges.get(to).from){
+			path.addFirst(parentEdges.get(to));
+		}
+    
     	return path;
     }
     
