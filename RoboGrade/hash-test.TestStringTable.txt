@@ -1,46 +1,20 @@
 -------------------
-CSE247 Robot tester starts testing hash on 2018-11-30 00:38:02 -0600
+CSE247 Robot tester starts testing hash on 2018-12-17 11:58:30 -0500
 
 ========
 Testing in ./GradingRepos/repos/cse247-f18-students-bozhaoli: hash as of 2018-11-03 00:05
 ========
 Now in: /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli
 Your branch is up to date with 'origin/master'.
-HEAD is now at 6e8d2ed Merge remote-tracking branch 'upstream/master'
+HEAD is now at 0bc9fac robograde
 No local changes to save
 
-Updating 6e8d2ed..949d731
+Updating 0bc9fac..7ea5f3c
 Fast-forward
- RoboGrade/hash-test.TestStringTable.txt        | 1016 ++++++++++++++++++++++++
- labs/avl/AVLTree.java                          |  149 +++-
- labs/avl/validate/BSTValidator.java            |   78 +-
- labs/spath/ShortestPaths.java                  |  141 ++++
- labs/spath/VertexAndDist.java                  |   43 +
- labs/spath/graphs/DirectedGraph.java           |   54 ++
- labs/spath/graphs/Edge.java                    |   22 +
- labs/spath/graphs/Vertex.java                  |   60 ++
- labs/spath/testing/GraphGenerator.java         |  290 +++++++
- labs/spath/testing/GraphViz.java               |  277 +++++++
- labs/spath/testing/TestShortestPath.java       |   76 ++
- labs/spath/testing/TestShortestPathSilent.java |   59 ++
- studiowriteups/studio10.txt                    |    2 +-
- studiowriteups/studio11.txt                    |   53 ++
- studiowriteups/studio13.txt                    |   52 ++
- 15 files changed, 2327 insertions(+), 45 deletions(-)
- create mode 100644 RoboGrade/hash-test.TestStringTable.txt
- create mode 100644 labs/spath/ShortestPaths.java
- create mode 100644 labs/spath/VertexAndDist.java
- create mode 100644 labs/spath/graphs/DirectedGraph.java
- create mode 100644 labs/spath/graphs/Edge.java
- create mode 100644 labs/spath/graphs/Vertex.java
- create mode 100644 labs/spath/testing/GraphGenerator.java
- create mode 100644 labs/spath/testing/GraphViz.java
- create mode 100644 labs/spath/testing/TestShortestPath.java
- create mode 100644 labs/spath/testing/TestShortestPathSilent.java
- create mode 100644 studiowriteups/studio11.txt
- create mode 100644 studiowriteups/studio13.txt
+ RoboGrade/spath-testing.TestShortestPathSilent.txt | 29 +++++++++++-----------
+ 1 file changed, 14 insertions(+), 15 deletions(-)
 Going back in time to: 2018-11-03 00:05
-At hash af0acb30209a9d1972f0d721a08754a62c1df325
+At hash 26650adfb9d91592c44827f2e56b487e2c6a487d
 
 Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
 
@@ -67,7 +41,7 @@ compile:
     [javac] Compiling 1 source file to /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli/bin
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 1 second
 Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
 
 compile:
@@ -77,7 +51,7 @@ compile:
     [javac] Note: Recompile with -Xlint:deprecation for details.
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 1 second
 Running test test.TestStringTable
 Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
 
@@ -85,39 +59,139 @@ test:
     [junit] Running hash.test.TestStringTable
     [junit] Testsuite: hash.test.TestStringTable
     [junit] Testing DNA test case 1
-    [junit] Observed output for case1 matches expected output!
-    [junit] 
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 9 2 tacc
     [junit] Testing DNA test case 2
-    [junit] Observed output for case2 matches expected output!
-    [junit] 
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 150 154 gtctagttgcagtagt
     [junit] Testing DNA test case 3
-    [junit] Observed output for case3 matches expected output!
-    [junit] 
+    [junit] The output files do not match starting at line 4 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 721 10523 attacaggcgtgagccac
     [junit] Testing DNA test case 4
-    [junit] Testsuite: hash.test.TestStringTable
-    [junit] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 56749 53342 ctgcggcgggattgcctgtcacggggagcccgcgaagttttacggatacgataacttacagagacagccgatttttacgacccagcaagaggccgagctggtacaatatcctgactgtaaatcgtccagtggtaatattggcgaggacccagaccacttaaatcagagctcgtctccttc
+    [junit] Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 3.718 sec
+    [junit] Output:
+    [junit] Testing DNA test case 1
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 9 2 tacc
+    [junit] Testing DNA test case 2
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 150 154 gtctagttgcagtagt
+    [junit] Testing DNA test case 3
+    [junit] The output files do not match starting at line 4 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 721 10523 attacaggcgtgagccac
+    [junit] Testing DNA test case 4
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 56749 53342 ctgcggcgggattgcctgtcacggggagcccgcgaagttttacggatacgataacttacagagacagccgatttttacgacccagcaagaggccgagctggtacaatatcctgactgtaaatcgtccagtggtaatattggcgaggacccagaccacttaaatcagagctcgtctccttc
     [junit] 
-    [junit] Testcase: testDNA4 took 0.002 sec
-    [junit] 	Caused an ERROR
-    [junit] Timeout occurred. Please note the time in the report does not reflect the time until the timeout.
-    [junit] junit.framework.AssertionFailedError: Timeout occurred. Please note the time in the report does not reflect the time until the timeout.
+    [junit] Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 3.718 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing DNA test case 1
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 9 2 tacc
+    [junit] Testing DNA test case 2
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 150 154 gtctagttgcagtagt
+    [junit] Testing DNA test case 3
+    [junit] The output files do not match starting at line 4 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 721 10523 attacaggcgtgagccac
+    [junit] Testing DNA test case 4
+    [junit] The output files do not match starting at line 5 
+    [junit] 	observed: Error (insert): hash table is full! 
+    [junit] 	expected: 56749 53342 ctgcggcgggattgcctgtcacggggagcccgcgaagttttacggatacgataacttacagagacagccgatttttacgacccagcaagaggccgagctggtacaatatcctgactgtaaatcgtccagtggtaatattggcgaggacccagaccacttaaatcagagctcgtctccttc
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testDNA1 took 0.059 sec
+    [junit] 	FAILED
+    [junit] The observed output for case1 differs from the expected output.
+    [junit] junit.framework.AssertionFailedError: The observed output for case1 differs from the expected output.
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:213)
+    [junit] 	at hash.test.TestStringTable.testDNA1(TestStringTable.java:168)
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Running hash.test.TestStringTable
-    [junit] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec
+    [junit] Testcase: testDNA2 took 0.037 sec
+    [junit] 	FAILED
+    [junit] The observed output for case2 differs from the expected output.
+    [junit] junit.framework.AssertionFailedError: The observed output for case2 differs from the expected output.
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:213)
+    [junit] 	at hash.test.TestStringTable.testDNA2(TestStringTable.java:174)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testDNA3 took 1.737 sec
+    [junit] 	FAILED
+    [junit] The observed output for case3 differs from the expected output.
+    [junit] junit.framework.AssertionFailedError: The observed output for case3 differs from the expected output.
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:213)
+    [junit] 	at hash.test.TestStringTable.testDNA3(TestStringTable.java:180)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testDNA4 took 1.843 sec
+    [junit] 	FAILED
+    [junit] The observed output for case4 differs from the expected output.
+    [junit] junit.framework.AssertionFailedError: The observed output for case4 differs from the expected output.
+    [junit] 	at hash.test.TestStringTable.testWithDNA(TestStringTable.java:213)
+    [junit] 	at hash.test.TestStringTable.testDNA4(TestStringTable.java:186)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testFind took 0.006 sec
+    [junit] 	FAILED
+    [junit] Could not find previously inserted record with stringabcdefg
+    [junit] junit.framework.AssertionFailedError: Could not find previously inserted record with stringabcdefg
+    [junit] 	at hash.test.TestStringTable.testFind(TestStringTable.java:91)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testInit took 0 sec
+    [junit] Testcase: testDelete took 0.001 sec
+    [junit] 	FAILED
+    [junit] Table size after deletions should be 8 expected:<0> but was:<8>
+    [junit] junit.framework.AssertionFailedError: Table size after deletions should be 8 expected:<0> but was:<8>
+    [junit] 	at hash.test.TestStringTable.testDelete(TestStringTable.java:131)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
+    [junit] Testcase: testInsert took 0.004 sec
+    [junit] 	FAILED
+    [junit] Could not insert record with key abcdefg into table
+    [junit] junit.framework.AssertionFailedError: Could not insert record with key abcdefg into table
+    [junit] 	at hash.test.TestStringTable.testInsert(TestStringTable.java:58)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    [junit] 
 
 BUILD FAILED
-/Users/puneetsachdeva/CSE247/cse247-support/build.xml:34: Test hash.test.TestStringTable failed (timeout)
+/Users/puneetsachdeva/CSE247/cse247-support/build.xml:34: Test hash.test.TestStringTable failed
 
-Total time: 10 seconds
+Total time: 4 seconds
 ========
 Testing in ./GradingRepos/repos/cse247-f18-students-bozhaoli: hash as of 2018-11-10 00:05
 ========
 Now in: /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli
 Your branch is up to date with 'origin/master'.
-HEAD is now at 949d731 Merge remote-tracking branch 'upstream/master'
+HEAD is now at 7ea5f3c robograde
 No local changes to save
 
 Already up to date.
@@ -159,7 +233,7 @@ compile:
     [javac] Note: Recompile with -Xlint:deprecation for details.
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 1 second
 Running test test.TestStringTable
 Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
 
@@ -182,7 +256,7 @@ test:
     [junit] The output files do not match starting at line 5 
     [junit] 	observed: Error (insert): hash table is full! 
     [junit] 	expected: 56749 53342 ctgcggcgggattgcctgtcacggggagcccgcgaagttttacggatacgataacttacagagacagccgatttttacgacccagcaagaggccgagctggtacaatatcctgactgtaaatcgtccagtggtaatattggcgaggacccagaccacttaaatcagagctcgtctccttc
-    [junit] Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 3.274 sec
+    [junit] Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 3.775 sec
     [junit] Output:
     [junit] Testing DNA test case 1
     [junit] The output files do not match starting at line 5 
@@ -201,7 +275,7 @@ test:
     [junit] 	observed: Error (insert): hash table is full! 
     [junit] 	expected: 56749 53342 ctgcggcgggattgcctgtcacggggagcccgcgaagttttacggatacgataacttacagagacagccgatttttacgacccagcaagaggccgagctggtacaatatcctgactgtaaatcgtccagtggtaatattggcgaggacccagaccacttaaatcagagctcgtctccttc
     [junit] 
-    [junit] Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 3.274 sec
+    [junit] Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 3.775 sec
     [junit] ------------- Standard Output ---------------
     [junit] Testing DNA test case 1
     [junit] The output files do not match starting at line 5 
@@ -221,7 +295,7 @@ test:
     [junit] 	expected: 56749 53342 ctgcggcgggattgcctgtcacggggagcccgcgaagttttacggatacgataacttacagagacagccgatttttacgacccagcaagaggccgagctggtacaatatcctgactgtaaatcgtccagtggtaatattggcgaggacccagaccacttaaatcagagctcgtctccttc
     [junit] ------------- ---------------- ---------------
     [junit] 
-    [junit] Testcase: testDNA1 took 0.051 sec
+    [junit] Testcase: testDNA1 took 0.069 sec
     [junit] 	FAILED
     [junit] The observed output for case1 differs from the expected output.
     [junit] junit.framework.AssertionFailedError: The observed output for case1 differs from the expected output.
@@ -231,7 +305,7 @@ test:
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Testcase: testDNA2 took 0.031 sec
+    [junit] Testcase: testDNA2 took 0.038 sec
     [junit] 	FAILED
     [junit] The observed output for case2 differs from the expected output.
     [junit] junit.framework.AssertionFailedError: The observed output for case2 differs from the expected output.
@@ -241,7 +315,7 @@ test:
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Testcase: testDNA3 took 1.607 sec
+    [junit] Testcase: testDNA3 took 1.858 sec
     [junit] 	FAILED
     [junit] The observed output for case3 differs from the expected output.
     [junit] junit.framework.AssertionFailedError: The observed output for case3 differs from the expected output.
@@ -251,7 +325,7 @@ test:
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Testcase: testDNA4 took 1.548 sec
+    [junit] Testcase: testDNA4 took 1.76 sec
     [junit] 	FAILED
     [junit] The observed output for case4 differs from the expected output.
     [junit] junit.framework.AssertionFailedError: The observed output for case4 differs from the expected output.
@@ -261,7 +335,7 @@ test:
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Testcase: testFind took 0.005 sec
+    [junit] Testcase: testFind took 0.006 sec
     [junit] 	FAILED
     [junit] Could not find previously inserted record with stringabcdefg
     [junit] junit.framework.AssertionFailedError: Could not find previously inserted record with stringabcdefg
@@ -270,7 +344,7 @@ test:
     [junit] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
     [junit] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
     [junit] 
-    [junit] Testcase: testInit took 0 sec
+    [junit] Testcase: testInit took 0.001 sec
     [junit] Testcase: testDelete took 0 sec
     [junit] 	FAILED
     [junit] Table size after deletions should be 8 expected:<0> but was:<8>
@@ -293,10 +367,10 @@ test:
 BUILD FAILED
 /Users/puneetsachdeva/CSE247/cse247-support/build.xml:34: Test hash.test.TestStringTable failed
 
-Total time: 3 seconds
+Total time: 4 seconds
 ================
 Lab is not counted -- failed unit tests
 ================
 
-CSE247 Robot tester ends testing hash on 2018-11-30 00:38:34 -0600
+CSE247 Robot tester ends testing hash on 2018-12-17 11:59:05 -0500
 -------------------
