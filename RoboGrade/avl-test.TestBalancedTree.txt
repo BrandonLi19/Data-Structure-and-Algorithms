@@ -1,19 +1,19 @@
 -------------------
-CSE247 Robot tester starts testing avl on 2018-12-16 21:25:43 -0500
+CSE247 Robot tester starts testing avl on 2018-12-17 18:15:28 -0500
 
 ========
-Testing in ./GradingRepos/repos/cse247-f18-students-bozhaoli: avl as of 2018-11-28 01:00
+Testing in ./GradingRepos/repos/cse247-f18-students-bozhaoli: avl as of 2018-11-28 09:00
 ========
 Now in: /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli
 Your branch is up to date with 'origin/master'.
-HEAD is now at 1109a51 robograde
+HEAD is now at c48c253 robograde
 No local changes to save
 
-Updating 1109a51..7e5981b
+Updating c48c253..19c0572
 Fast-forward
- RoboGrade/spath-testing.TestShortestPathSilent.txt | 31 +++++++++++-----------
- 1 file changed, 16 insertions(+), 15 deletions(-)
-Going back in time to: 2018-11-28 01:00
+ RoboGrade/heaps-test.TestMinHeap.txt | 69 ++++++++++++++++++------------------
+ 1 file changed, 34 insertions(+), 35 deletions(-)
+Going back in time to: 2018-11-28 09:00
 At hash 0136cef6923badc344579486530550c1b3a99fb7
 
 Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
@@ -33,7 +33,7 @@ compile:
     [javac] Compiling 1 source file to /Users/puneetsachdeva/CSE247/cse247-support/GradingRepos/repos/cse247-f18-students-bozhaoli/bin
 
 BUILD SUCCESSFUL
-Total time: 0 seconds
+Total time: 1 second
 Buildfile: /Users/puneetsachdeva/CSE247/cse247-support/build.xml
 
 compile:
@@ -80,20 +80,20 @@ test:
     [junit] |  |  |  L-12
     [junit] |  |  |  R-14
     [junit] 
-    [junit] Root-9
-    [junit] |  L-4
-    [junit] |  |  L-2
+    [junit] Root-6
+    [junit] |  L-3
+    [junit] |  |  L-1
     [junit] |  |  |  L-0
-    [junit] |  |  |  |  R-1
-    [junit] |  |  |  R-3
-    [junit] |  |  R-7
-    [junit] |  |  |  L-5
-    [junit] |  |  |  |  R-6
-    [junit] |  |  |  R-8
-    [junit] |  R-11
-    [junit] |  |  L-10
+    [junit] |  |  |  R-2
+    [junit] |  |  R-4
+    [junit] |  |  |  R-5
+    [junit] |  R-12
+    [junit] |  |  L-9
+    [junit] |  |  |  L-7
+    [junit] |  |  |  |  R-8
+    [junit] |  |  |  R-10
+    [junit] |  |  |  |  R-11
     [junit] |  |  R-13
-    [junit] |  |  |  L-12
     [junit] |  |  |  R-14
     [junit] 
     [junit] Root-7
@@ -112,23 +112,23 @@ test:
     [junit] |  |  |  L-12
     [junit] |  |  |  R-14
     [junit] 
-    [junit] Root-6
-    [junit] |  L-2
-    [junit] |  |  L-1
-    [junit] |  |  |  L-0
-    [junit] |  |  R-4
-    [junit] |  |  |  L-3
-    [junit] |  |  |  R-5
-    [junit] |  R-10
-    [junit] |  |  L-8
-    [junit] |  |  |  L-7
-    [junit] |  |  |  R-9
-    [junit] |  |  R-13
-    [junit] |  |  |  L-12
-    [junit] |  |  |  |  L-11
-    [junit] |  |  |  R-14
+    [junit] Root-9
+    [junit] |  L-5
+    [junit] |  |  L-3
+    [junit] |  |  |  L-1
+    [junit] |  |  |  |  L-0
+    [junit] |  |  |  |  R-2
+    [junit] |  |  |  R-4
+    [junit] |  |  R-7
+    [junit] |  |  |  L-6
+    [junit] |  |  |  R-8
+    [junit] |  R-12
+    [junit] |  |  L-10
+    [junit] |  |  |  R-11
+    [junit] |  |  R-14
+    [junit] |  |  |  L-13
     [junit] 
-    [junit] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.747 sec
+    [junit] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.431 sec
     [junit] Output:
     [junit] Root-7
     [junit] |  L-3
@@ -162,20 +162,20 @@ test:
     [junit] |  |  |  L-12
     [junit] |  |  |  R-14
     [junit] 
-    [junit] Root-9
-    [junit] |  L-4
-    [junit] |  |  L-2
+    [junit] Root-6
+    [junit] |  L-3
+    [junit] |  |  L-1
     [junit] |  |  |  L-0
-    [junit] |  |  |  |  R-1
-    [junit] |  |  |  R-3
-    [junit] |  |  R-7
-    [junit] |  |  |  L-5
-    [junit] |  |  |  |  R-6
-    [junit] |  |  |  R-8
-    [junit] |  R-11
-    [junit] |  |  L-10
+    [junit] |  |  |  R-2
+    [junit] |  |  R-4
+    [junit] |  |  |  R-5
+    [junit] |  R-12
+    [junit] |  |  L-9
+    [junit] |  |  |  L-7
+    [junit] |  |  |  |  R-8
+    [junit] |  |  |  R-10
+    [junit] |  |  |  |  R-11
     [junit] |  |  R-13
-    [junit] |  |  |  L-12
     [junit] |  |  |  R-14
     [junit] 
     [junit] Root-7
@@ -194,24 +194,24 @@ test:
     [junit] |  |  |  L-12
     [junit] |  |  |  R-14
     [junit] 
-    [junit] Root-6
-    [junit] |  L-2
-    [junit] |  |  L-1
-    [junit] |  |  |  L-0
-    [junit] |  |  R-4
-    [junit] |  |  |  L-3
-    [junit] |  |  |  R-5
-    [junit] |  R-10
-    [junit] |  |  L-8
-    [junit] |  |  |  L-7
-    [junit] |  |  |  R-9
-    [junit] |  |  R-13
-    [junit] |  |  |  L-12
-    [junit] |  |  |  |  L-11
-    [junit] |  |  |  R-14
+    [junit] Root-9
+    [junit] |  L-5
+    [junit] |  |  L-3
+    [junit] |  |  |  L-1
+    [junit] |  |  |  |  L-0
+    [junit] |  |  |  |  R-2
+    [junit] |  |  |  R-4
+    [junit] |  |  R-7
+    [junit] |  |  |  L-6
+    [junit] |  |  |  R-8
+    [junit] |  R-12
+    [junit] |  |  L-10
+    [junit] |  |  |  R-11
+    [junit] |  |  R-14
+    [junit] |  |  |  L-13
     [junit] 
     [junit] 
-    [junit] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.747 sec
+    [junit] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.431 sec
     [junit] ------------- Standard Output ---------------
     [junit] Root-7
     [junit] |  L-3
@@ -245,20 +245,20 @@ test:
     [junit] |  |  |  L-12
     [junit] |  |  |  R-14
     [junit] 
-    [junit] Root-9
-    [junit] |  L-4
-    [junit] |  |  L-2
+    [junit] Root-6
+    [junit] |  L-3
+    [junit] |  |  L-1
     [junit] |  |  |  L-0
-    [junit] |  |  |  |  R-1
-    [junit] |  |  |  R-3
-    [junit] |  |  R-7
-    [junit] |  |  |  L-5
-    [junit] |  |  |  |  R-6
-    [junit] |  |  |  R-8
-    [junit] |  R-11
-    [junit] |  |  L-10
+    [junit] |  |  |  R-2
+    [junit] |  |  R-4
+    [junit] |  |  |  R-5
+    [junit] |  R-12
+    [junit] |  |  L-9
+    [junit] |  |  |  L-7
+    [junit] |  |  |  |  R-8
+    [junit] |  |  |  R-10
+    [junit] |  |  |  |  R-11
     [junit] |  |  R-13
-    [junit] |  |  |  L-12
     [junit] |  |  |  R-14
     [junit] 
     [junit] Root-7
@@ -277,41 +277,41 @@ test:
     [junit] |  |  |  L-12
     [junit] |  |  |  R-14
     [junit] 
-    [junit] Root-6
-    [junit] |  L-2
-    [junit] |  |  L-1
-    [junit] |  |  |  L-0
-    [junit] |  |  R-4
-    [junit] |  |  |  L-3
-    [junit] |  |  |  R-5
-    [junit] |  R-10
-    [junit] |  |  L-8
-    [junit] |  |  |  L-7
-    [junit] |  |  |  R-9
-    [junit] |  |  R-13
-    [junit] |  |  |  L-12
-    [junit] |  |  |  |  L-11
-    [junit] |  |  |  R-14
+    [junit] Root-9
+    [junit] |  L-5
+    [junit] |  |  L-3
+    [junit] |  |  |  L-1
+    [junit] |  |  |  |  L-0
+    [junit] |  |  |  |  R-2
+    [junit] |  |  |  R-4
+    [junit] |  |  R-7
+    [junit] |  |  |  L-6
+    [junit] |  |  |  R-8
+    [junit] |  R-12
+    [junit] |  |  L-10
+    [junit] |  |  |  R-11
+    [junit] |  |  R-14
+    [junit] |  |  |  L-13
     [junit] 
     [junit] ------------- ---------------- ---------------
     [junit] 
-    [junit] Testcase: testInsertLargeRandom took 0.826 sec
-    [junit] Testcase: testInsertSmallDescending took 0.001 sec
-    [junit] Testcase: testRemoveLarge took 0.59 sec
-    [junit] Testcase: testRebalanceSmall took 0 sec
+    [junit] Testcase: testInsertLargeRandom took 1.092 sec
+    [junit] Testcase: testInsertSmallDescending took 0.002 sec
+    [junit] Testcase: testRemoveLarge took 0.893 sec
+    [junit] Testcase: testRebalanceSmall took 0.001 sec
     [junit] Testcase: testRemoveSmall took 0.001 sec
     [junit] Testcase: testEmptyTree took 0 sec
     [junit] Testcase: testInsertSmallRandom took 0 sec
-    [junit] Testcase: testInsertLargeAscending took 0.2 sec
-    [junit] Testcase: testInsertLargeDescending took 0.092 sec
+    [junit] Testcase: testInsertLargeAscending took 0.144 sec
+    [junit] Testcase: testInsertLargeDescending took 0.248 sec
     [junit] Testcase: testInsertSmallAscending took 0 sec
-    [junit] Testcase: testInsertDuplicates took 0 sec
+    [junit] Testcase: testInsertDuplicates took 0.001 sec
 
 BUILD SUCCESSFUL
-Total time: 2 seconds
+Total time: 3 seconds
 ================
 Lab is counted as working
 ================
 
-CSE247 Robot tester ends testing avl on 2018-12-16 21:25:51 -0500
+CSE247 Robot tester ends testing avl on 2018-12-17 18:15:37 -0500
 -------------------
